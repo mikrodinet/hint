@@ -1,6 +1,6 @@
 <?php
 
-$url = "https://wahyu9kdl.github.io/link-lock/create/";
+$url = "https://mikrodinet.github.io/hint/create/";
 
 $curl = curl_init($url);
 curl_setopt($curl, CURLOPT_URL, $url);
