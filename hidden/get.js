@@ -1,4 +1,4 @@
-var url = "https://wahyu9kdl.github.io/link-lock/create/";
+var url = "https://mikrodinet.github.io/hint/create/";
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", url);
