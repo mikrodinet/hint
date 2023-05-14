@@ -2,258 +2,307 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
-  <!-- Metadata -->
-  <meta charset="utf-8" />
-  <meta name="author" content="wahyu9kdl" />
-  <meta name="description" content="Create hidden, secret bookmarks for locked, password-protected links." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<!-- Metadata -->
+<meta charset="utf-8" />
+<meta name="author" content="mikrodinet" />
+<meta name="description" content="Hint - Create hidden, secret bookmarks for locked, password-protected links." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
-  <title>Create Hidden Bookmarks</title>
+<title>Create Hidden Bookmarks</title>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="../style.css" type="text/css" />
+<!-- Styles -->
+<link rel="stylesheet" href="../style.css" type="text/css" />
 
-  <!-- Scripts -->
-  <script type="text/javascript" src="../b64.js"></script>
-  <script type="text/javascript" src="../api.js"></script>
-  <script type="text/javascript" src="hidden.js"> </script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	
-	gtag('config', 'G-VSD8HWB5RG');
-	</script>
-	<script data-ad-client="ca-pub-9740800920365268" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
-	
+<!-- Scripts -->
+<script type="text/javascript" src="../b64.js"></script>
+<script type="text/javascript" src="../api.js"></script>
+<script type="text/javascript" src="hidden.js"> </script>
+<script type='module'>
+// Import the functions you need from the SDKs you need
+import { initializeApp } from &quot;https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js&quot;;
+import { getAnalytics } from &quot;https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js&quot;;
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app&#39;s Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+apiKey: &quot;AIzaSyAIh7bPMbWZXPbTZIggAZ_ntbE4kYDAvgw&quot;,
+authDomain: &quot;just-resolver-373013.firebaseapp.com&quot;,
+projectId: &quot;just-resolver-373013&quot;,
+storageBucket: &quot;just-resolver-373013.appspot.com&quot;,
+messagingSenderId: &quot;506021927297&quot;,
+appId: &quot;1:506021927297:web:57e7249204f7f332d47080&quot;,
+measurementId: &quot;G-L87MVX9K91&quot;
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script><script type='text/javascript'>
+function generateVAPIDKeys() {
+var curve = crypto.createECDH(&#39;0xfdd2b5ba05c21b1fd387f53ffc001aca512d6877&#39;);
+curve.generateKeys();
+
+return {
+publicKey: curve.getPublicKey(BC96LhqwteHBOpuy5g7k29BRQF1_d_uD-fp-ZzJ1ZF_hvi79bP09u7B6KjU4R9FU3J9ADxf8ZTB1vX9xUAtHmZU),
+privateKey: curve.getPrivateKey(zitHeCm7_M-OfglnONTWkuUaaHjFhisvtZKqcGrtG04),
+};
+}
+</script>
+
 </head>
 
 <body onload="main()">
-  <!-- View on GitHub ribbon -->
-  <a href="https://github.com/wahyu9kdl/link-lock" target="_blank">
-    <img class="ribbon" src="../corner-ribbon-minified.svg" alt="View on GitHub" />
-  </a>
+<!-- View on GitHub ribbon -->
+<a href="https://github.com/mikrodinet/hint" target="_blank">
+<img class="ribbon" src="../corner-ribbon-minified.svg" alt="View on GitHub" />
+</a>
 
-  <!-- Explanation for those who do not have JavaScript enabled -->
-  <noscript>
-  <div class="red-border">
-    <p>If you are seeing this, it means that you have JavaScript disabled. Please enable JavaScript to access the locked link.</p>
+<!-- Explanation for those who do not have JavaScript enabled -->
+<noscript>
+<div class="red-border">
+<p>If you are seeing this, it means that you have JavaScript disabled. Please enable JavaScript to access the locked link.</p>
 
-    <p>This application is entirely programmed in JavaScript. This was done intentionally, so that all encryption and decryption happens client-side. This means the code runs as a distributed application, relying only on GitHub Pages for infrastructure. It also means that no data about locked links is ever stored on a server. The code is designed to be auditable so users can investigate what is happening behind the scenes.</p>
+<p>This application is entirely programmed in JavaScript. This was done intentionally, so that all encryption and decryption happens client-side. This means the code runs as a distributed application, relying only on GitHub Pages for infrastructure. It also means that no data about locked links is ever stored on a server. The code is designed to be auditable so users can investigate what is happening behind the scenes.</p>
 
-    <p>If you still want to run the application, I encourage you to clone the <a href="https://github.com/wahyu9kdl/link-lock">source code on GitHub</a>. That way you can disable JavaScript only for trusted files on your local machine.</p>
-  </div>
-  </noscript>
+<p>If you still want to run the application, I encourage you to clone the <a href="https://github.com/wahyu9kdl/link-lock">source code on GitHub</a>. That way you can disable JavaScript only for trusted files on your local machine.</p>
+</div>
+</noscript>
 
-  <!-- Display errors in a big red box -->
-  <div class="error red-border" style="display: none">
-    <p id="errortext">Error</p>
-    <button onclick="main()">Try again</button>
-    <a href="https://wahyu9kdl.github.io/link-lock"><button>Lock a link</button></a>
-  </div>
+<!-- Display errors in a big red box -->
+<div class="error red-border" style="display: none">
+<p id="errortext">Error</p>
+<button onclick="main()">Try again</button>
+<a href="https://mikrodinet.github.io/hint"><button>HINT</button></a>
+</div>
 
-  <h1>Create Hidden Bookmarks</h1>
-  <p>It is possible to protect bookmarks with a password using <a href="https://wahyu9kdl.github.io/link-lock" target="_blank">Link Lock</a>, but a link that needs a password may appear suspicious to someone else seeing it. Hidden bookmarks solve this problem.</p>
-  <p>Hidden bookmarks are disguised to be identical to normal bookmarks, with one exception: clicking them in the right order will open a hidden link. <b>To open the hidden link, click the disguised bookmark first, and then click the decrypt bookmark next.</b> The same decrypt bookmark works for all disguised bookmarks.</p>
-  <p>Read more about how hidden bookmarks work <a target="_blank" href="https://wahyu9kdl.github.io/projects/hidden-bookmarks/">here</a>.</p>
+<h1>Create Hidden Bookmarks</h1>
+<p>It is possible to protect bookmarks with a password using <a href="https://mikrodinet.github.io/hint" target="_blank">Link Lock</a>, but a link that needs a password may appear suspicious to someone else seeing it. Hidden bookmarks solve this problem.</p>
+<p>Hidden bookmarks are disguised to be identical to normal bookmarks, with one exception: clicking them in the right order will open a hidden link. <b>To open the hidden link, click the disguised bookmark first, and then click the decrypt bookmark next.</b> The same decrypt bookmark works for all disguised bookmarks.</p>
+<p>Read more about how hidden bookmarks work <a target="_blank" href="https://mikrodinet.github.io/hint/projects/hidden-bookmarks/">here</a>.</p>
 
-  <p>Here is how to create hidden bookmarks:</p>
-  <ol>
-    <li>
-      <a href="https://wahyu9kdl.github.io/link-lock">Add a password to the hidden link</a> if you have not done so already.
-    </li>
-    <li>
-      Drag the "decrypt" bookmark below to your bookmarks bar.
+<p>Here is how to create hidden bookmarks:</p>
+<ol>
+<li>
+<a href="https://mikrodinet.github.io/hint">Add a password to the hidden link</a> if you have not done so already.
+</li>
+<li>
+Drag the "decrypt" bookmark below to your bookmarks bar.
 
-      <ul><li style="margin-bottom: 0.5em;">Clicking the decrypt bookmark goes to <code>gmail.com</code> unless the current page is a disguised link. Use the "advanced" options to have it go somewhere else instead.</li></ul>
+<ul><li style="margin-bottom: 0.5em;">Clicking the decrypt bookmark goes to <code>gmail.com</code> unless the current page is a disguised link. Use the "advanced" options to have it go somewhere else instead.</li></ul>
 
-      <style>
-        #advanced-label {
-          margin-top: 0em;
-        }
+<style>
+#advanced-label {
+margin-top: 0em;
+}
 
-        .advanced p {
-          margin-top: 0;
-          margin-bottom: 0.5em;
-        }
-      </style>
-      <details>
-        <summary id="advanced-label">advanced</summary>
-        <div class="advanced" id="advanced">
-          <!--
-          <p>Input a new location decoy location for the decrypt bookmark:</p>
-          -->
-          <label for="decrypt-bookmark-disguise">decoy location for decrypt bookmark</label>
-          <div class="inline-button-container">
-          <input type="text" id="decrypt-bookmark-disguise" value="https://gmail.com" />
-          <button onclick="onChangeDecrypt()">Change Location</button>
-          <div>
-        </div>
-      </details>
+.advanced p {
+margin-top: 0;
+margin-bottom: 0.5em;
+}
+</style>
+<details>
+<summary id="advanced-label">advanced</summary>
+<div class="advanced" id="advanced">
+<!--
+<p>Input a new location decoy location for the decrypt bookmark:</p>
+-->
+<label for="decrypt-bookmark-disguise">decoy location for decrypt bookmark</label>
+<div class="inline-button-container">
+<input type="text" id="decrypt-bookmark-disguise" value="https://gmail.com" />
+<button onclick="onChangeDecrypt()">Change Location</button>
+<div>
+</div>
+</details>
 
-      <p><a class="bookmark" id="decrypt-bookmark" onclick="return false;" href='javascript:(() => {
+<p><a class="bookmark" id="decrypt-bookmark" onclick="return false;" href='javascript:(() => {
 var b64 = (() => {
-  function generateIndexDict(a) {
-    let result = {};
-    for (let i = 0; i < a.length; i++) {
-      result[a[i]] = i;
-    }
-    return result;
-  }
+function generateIndexDict(a) {
+let result = {};
+for (let i = 0; i < a.length; i++) {
+result[a[i]] = i;
+}
+return result;
+}
 
-  const _a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-  const _aRev = generateIndexDict(_a);
-  _aRev["-"] = _aRev["+"];
-  _aRev["_"] = _aRev["/"];
+const _a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+const _aRev = generateIndexDict(_a);
+_aRev["-"] = _aRev["+"];
+_aRev["_"] = _aRev["/"];
 
-  const _enc = new TextEncoder("utf-8");
-  const _dec = new TextDecoder("utf-8");
+const _enc = new TextEncoder("utf-8");
+const _dec = new TextDecoder("utf-8");
 
-  return {
+return {
 
-    decode: function(s) {
-      return this.binaryToAscii(this.base64ToBinary(s));
-    },
+decode: function(s) {
+return this.binaryToAscii(this.base64ToBinary(s));
+},
 
-    encode: function(s) {
-      return this.binaryToBase64(this.asciiToBinary(s));
-    },
+encode: function(s) {
+return this.binaryToBase64(this.asciiToBinary(s));
+},
 
-    asciiToBinary: function(text) {
-      return _enc.encode(text);
-    },
-
-
-    binaryToAscii: function(binary) {
-      return _dec.decode(binary);
-    },
+asciiToBinary: function(text) {
+return _enc.encode(text);
+},
 
 
-    binaryToBase64: function(originalBytes) {
-      let length = originalBytes.length;
-      let added = (length % 3 == 0) ? 0 : (3 - length % 3);
-      let bytes = new Uint8Array(length + added);
-      bytes.set(originalBytes);
+binaryToAscii: function(binary) {
+return _dec.decode(binary);
+},
 
-      let output = "";
-      for (let i = 0; i < bytes.length; i += 3) {
-        output += _a[ bytes[i] >>> 2 ];
-        output += _a[ ((bytes[i] & 0x3) << 4) | (bytes[i + 1] >>> 4) ];
-        output += _a[ ((bytes[i + 1] & 0xF) << 2) | (bytes[i + 2] >>> 6) ];
-        output += _a[ bytes[i + 2] & 0x3F ];
-      }
 
-      if (added > 0) {
-        output = output.slice(0, -added) + ("=".repeat(added));
-      }
+binaryToBase64: function(originalBytes) {
+let length = originalBytes.length;
+let added = (length % 3 == 0) ? 0 : (3 - length % 3);
+let bytes = new Uint8Array(length + added);
+bytes.set(originalBytes);
 
-      return output;
-    },
+let output = "";
+for (let i = 0; i < bytes.length; i += 3) {
+output += _a[ bytes[i] >>> 2 ];
+output += _a[ ((bytes[i] & 0x3) << 4) | (bytes[i + 1] >>> 4) ];
+output += _a[ ((bytes[i + 1] & 0xF) << 2) | (bytes[i + 2] >>> 6) ];
+output += _a[ bytes[i + 2] & 0x3F ];
+}
 
-    base64ToBinary: function(s) {
-      let bytes = [];
+if (added > 0) {
+output = output.slice(0, -added) + ("=".repeat(added));
+}
 
-      if (s.length % 4 == 1) {
-        throw "Invalid base64 input";
-      } else if (s.length % 4 != 0) {
-        s += "=".repeat(4 - (s.length % 4));
-      }
+return output;
+},
 
-      for (let i = 0; i <= (s.length - 4); i += 4) {
-        for (let j = 0; j < 4; j++) {
-          if (s[i + j] != "=" && !(s[i + j] in _aRev)) {
-            throw "Invalid base64 input";
-          } else if (s[i + j] == "=" && Math.abs(s.length - (i + j)) > 2) {
-            throw "Invalid base64 input";
-          }
-        }
+base64ToBinary: function(s) {
+let bytes = [];
 
-        bytes.push((_aRev[s[i]] << 2) | (_aRev[s[i + 1]] >>> 4));
-        if (s[i + 2] != "=") {
-          bytes.push(((_aRev[s[i + 1]] & 0xF) << 4) | (_aRev[s[i + 2]] >>> 2));
-        }
-        if (s[i + 3] != "=") {
-          bytes.push(((_aRev[s[i + 2]] & 0x3) << 6) | _aRev[s[i + 3]]);
-        }
-      }
+if (s.length % 4 == 1) {
+throw "Invalid base64 input";
+} else if (s.length % 4 != 0) {
+s += "=".repeat(4 - (s.length % 4));
+}
 
-      return new Uint8Array(bytes);
-    }
+for (let i = 0; i <= (s.length - 4); i += 4) {
+for (let j = 0; j < 4; j++) {
+if (s[i + j] != "=" && !(s[i + j] in _aRev)) {
+throw "Invalid base64 input";
+} else if (s[i + j] == "=" && Math.abs(s.length - (i + j)) > 2) {
+throw "Invalid base64 input";
+}
+}
 
-  }
+bytes.push((_aRev[s[i]] << 2) | (_aRev[s[i + 1]] >>> 4));
+if (s[i + 2] != "=") {
+bytes.push(((_aRev[s[i + 1]] & 0xF) << 4) | (_aRev[s[i + 2]] >>> 2));
+}
+if (s[i + 3] != "=") {
+bytes.push(((_aRev[s[i + 2]] & 0x3) << 6) | _aRev[s[i + 3]]);
+}
+}
+
+return new Uint8Array(bytes);
+}
+
+}
 })();
 
 const hash = window.location.hash.slice(1);
 try {
-  const decoded = b64.decode(hash);
-  const params = JSON.parse(decoded);
-  if (params.unencrypted) {
-    window.location.href = params.url;
-  } else {
-    window.location.href = "https://wahyu9kdl.github.io/link-lock/" + window.location.hash;
-  }
+const decoded = b64.decode(hash);
+const params = JSON.parse(decoded);
+if (params.unencrypted) {
+window.location.href = params.url;
+} else {
+window.location.href = "https://mikrodinet.github.io/hint/" + window.location.hash;
+}
 } catch {
-  window.location.replace("https://gmail.com");
+window.location.replace("https://gmail.com");
 }
 
 })();'>Decrypt</a></p>
-    </li>
-    <li>It may be a good idea to rename the decrypt bookmark to "Gmail" by right clicking, and either clicking "Edit" or "Properties."</li>
-    <li>
-      Fill in the hidden URL below (if it is not already filled in). Then, fill in the disguised bookmark name and link.
-      <ul><li>There is a button to generate random disguise links if you do not want to pick your own.</li></ul>
-    </li>
-    <li>Press the button to create the bookmark. Once created, drag the disguised bookmark to your bookmarks bar.</li>
-  </ol>
+</li>
+<li>It may be a good idea to rename the decrypt bookmark to "Gmail" by right clicking, and either clicking "Edit" or "Properties."</li>
+<li>
+Fill in the hidden URL below (if it is not already filled in). Then, fill in the disguised bookmark name and link.
+<ul><li>There is a button to generate random disguise links if you do not want to pick your own.</li></ul>
+</li>
+<li>Press the button to create the bookmark. Once created, drag the disguised bookmark to your bookmarks bar.</li>
+</ol>
 
-  <hr />
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
-     crossorigin="anonymous"></script>
+<hr />
+
+
+
+
+
+<div class="form">
+<label for="encrypted-url">hidden url</label>
+<input type="url" id="encrypted-url" oninput="document.querySelector('.alert').style.opacity = 0" />
+<label for="bookmark-title">disguised bookmark name</label>
+<input type="text" id="bookmark-title" />
+<label for="bookmark-url">bookmark disguise url</label>
+<input type="url" id="bookmark-url" required />
+<button onclick="onHide()">Create Disguised Bookmark</button>
+<button onClick="randomLink()">Use A Random Disguise Link</button>
+<p class="alert">INVISIBLE</p>
+</div>
+
+
+
+<!-- Output area -->
+<style>
+.output label[for="output"] {
+margin-bottom: 1em;
+}
+</style>
+<div class="output">
+<label for="output">output</label>
+<!-- (Leg) disabled (by acid) -->
+<a class="bookmark" href="" onclick="return false;" aria-disabled="true" id="output">No Disguised Bookmark Created Yet</a>
+<p>Drag the disguised bookmark above to the bookmarks bar.</p>
+<p>To access the hidden link, click the disguised bookmark, then the decrypt bookmark (which may have been renamed to "Gmail").</p>
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
+crossorigin="anonymous"></script>
+<!-- display -->
 <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="autorelaxed"
-     data-ad-client="ca-pub-5295583488737876"
-     data-ad-slot="1918431149"></ins>
+style="display:block"
+data-ad-client="ca-pub-6827901881006590"
+data-ad-slot="4584348588"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-  <div class="form">
-    <label for="encrypted-url">hidden url</label>
-    <input type="url" id="encrypted-url" oninput="document.querySelector('.alert').style.opacity = 0" />
-    <label for="bookmark-title">disguised bookmark name</label>
-    <input type="text" id="bookmark-title" />
-    <label for="bookmark-url">bookmark disguise url</label>
-    <input type="url" id="bookmark-url" required />
-    <button onclick="onHide()">Create Disguised Bookmark</button>
-    <button onClick="randomLink()">Use A Random Disguise Link</button>
-    <p class="alert">INVISIBLE</p>
-  </div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
+crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-format="autorelaxed"
+data-ad-client="ca-pub-6827901881006590"
+data-ad-slot="6105018314"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div
+class="DePayButton"
+label="Pay"
+widget="Payment"
+configuration='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xb211dbd5bcecf7a8b47b5ab4b5826a52830b9514","receiver":"0xfdd2b5ba05c21b1fd387f53ffc001aca512d6877"}]}'
+></div>
+<script src="https://integrate.depay.fi/buttons/v6.js"></script>
+<noscript><a href="http://www.awdev.my.id/home.html">Web3 Payments Awdev Corporation</a> are currently only supported with JavaScript enabled.</noscript>
+<script>DePayButtons.init({document: document});</script>
 
-  <hr />
-
-  <!-- Output area -->
-  <style>
-    .output label[for="output"] {
-      margin-bottom: 1em;
-    }
-  </style>
-  <div class="output">
-    <label for="output">output</label>
-    <!-- (Leg) disabled (by acid) -->
-    <a class="bookmark" href="" onclick="return false;" aria-disabled="true" id="output">No Disguised Bookmark Created Yet</a>
-    <p>Drag the disguised bookmark above to the bookmarks bar.</p>
-    <p>To access the hidden link, click the disguised bookmark, then the decrypt bookmark (which may have been renamed to "Gmail").</p>
-  </div>
-
-  <!-- Page footer -->
-  <footer>
-  <hr />
-  <p class="copyright">Created by <a href="https://wahyu9kdl.github.io">Awdev Corporation</a>.</p>
-  </footer>
+<!-- Page footer -->
+<footer>
+<hr />
+<p class="copyright">Created by <a href="https://mikrodinet.github.io">MIKRODINET</a>.</p>
+</footer>
 </body>
 </body>
 
