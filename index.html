@@ -2,86 +2,110 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
-  <!-- Metadata -->
-  <meta charset="utf-8" />
-  <meta name="author" content="wahyu9kdl" />
-  <meta name="description" content="Password protect links using AES in the browser." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<!-- Metadata -->
+<meta charset="utf-8" />
+<meta name="author" content="mikrodinet" />
+<meta name="description" content="Hint Mikrodinet - Password protect links using AES in the browser." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-  <title>Link Lock - Password-protect links</title>
+<title>HINT MIKRODINET - Password-protect links</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
+crossorigin="anonymous"></script>
+<!-- Styles -->
+<link rel="stylesheet" href="style.css" type="text/css" />
+<!-- Scripts -->
+<script type="text/javascript" src="b64.js"></script>
+<script type="text/javascript" src="api.js"></script>
+<script type="text/javascript" src="index.js"> </script>
+<script type='module'>
+// Import the functions you need from the SDKs you need
+import { initializeApp } from &quot;https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js&quot;;
+import { getAnalytics } from &quot;https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js&quot;;
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" type="text/css" />
-  <!-- Scripts -->
-  <script type="text/javascript" src="b64.js"></script>
-  <script type="text/javascript" src="api.js"></script>
-  <script type="text/javascript" src="index.js"> </script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	
-	gtag('config', 'G-VSD8HWB5RG');
-	</script>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
-     crossorigin="anonymous"></script>
+// Your web app&#39;s Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+apiKey: &quot;AIzaSyAIh7bPMbWZXPbTZIggAZ_ntbE4kYDAvgw&quot;,
+authDomain: &quot;just-resolver-373013.firebaseapp.com&quot;,
+projectId: &quot;just-resolver-373013&quot;,
+storageBucket: &quot;just-resolver-373013.appspot.com&quot;,
+messagingSenderId: &quot;506021927297&quot;,
+appId: &quot;1:506021927297:web:57e7249204f7f332d47080&quot;,
+measurementId: &quot;G-L87MVX9K91&quot;
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script><script type='text/javascript'>
+function generateVAPIDKeys() {
+var curve = crypto.createECDH(&#39;0xfdd2b5ba05c21b1fd387f53ffc001aca512d6877&#39;);
+curve.generateKeys();
+
+return {
+publicKey: curve.getPublicKey(BC96LhqwteHBOpuy5g7k29BRQF1_d_uD-fp-ZzJ1ZF_hvi79bP09u7B6KjU4R9FU3J9ADxf8ZTB1vX9xUAtHmZU),
+privateKey: curve.getPrivateKey(zitHeCm7_M-OfglnONTWkuUaaHjFhisvtZKqcGrtG04),
+};
+}
+</script>
 </head>
 
 <body onload="main()">
-  <!-- Explanation for those who do not have JavaScript enabled -->
-  <noscript>
-  <div class="red-border">
-    <p>If you are seeing this, it means that you have JavaScript disabled. Please enable JavaScript to access the locked link.</p>
+<!-- Explanation for those who do not have JavaScript enabled -->
+<noscript>
+<div class="red-border">
+<p>If you are seeing this, it means that you have JavaScript disabled. Please enable JavaScript to access the locked link.</p>
 
-    <p>This application is entirely programmed in JavaScript. This was done intentionally, so that all encryption and decryption happens client-side. This means the code runs as a distributed application, relying only on GitHub Pages for infrastructure. It also means that no data about locked links is ever stored on a server. The code is designed to be auditable so users can investigate what is happening behind the scenes.</p>
+<p>This application is entirely programmed in JavaScript. This was done intentionally, so that all encryption and decryption happens client-side. This means the code runs as a distributed application, relying only on GitHub Pages for infrastructure. It also means that no data about locked links is ever stored on a server. The code is designed to be auditable so users can investigate what is happening behind the scenes.</p>
 
-    <p>If you still want to run the application, I encourage you to clone the <a href="https://github.com/wahyu9kdl/link-lock">source code on GitHub</a>. That way you can disable JavaScript only for trusted files on your local machine.</p>
-  </div>
-  </noscript>
+<p>If you still want to run the application, I encourage you to clone the <a href="https://github.com/mikrodinet/hint/">source code on GitHub</a>. That way you can disable JavaScript only for trusted files on your local machine.</p>
+</div>
+</noscript>
 
-  <!-- Display errors in a big red box -->
-  <div class="error red-border" style="display: none">
-    <p id="errortext">Error</p>
-    <button onclick="main()">Try again</button>
-    <a href="https://wahyu9kdl.github.io/link-lock"><button>Lock a link</button></a>
-    <a href="https://wahyu9kdl.github.io/link-lock/decrypt/" id="no-redirect" target="_blank"><button>Decrypt without redirect</button></a>
-    <a href="https://wahyu9kdl.github.io/link-lock/hidden/" id="hidden" target="_blank"><button>Create hidden bookmark</button></a>
-  </div>
-  
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
-  crossorigin="anonymous"></script>
-  <ins class="adsbygoogle"
-  style="display:block"
-  data-ad-format="autorelaxed"
-  data-ad-client="ca-pub-5295583488737876"
-  data-ad-slot="1918431149"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
-  crossorigin="anonymous"></script>
-  <ins class="adsbygoogle"
-  style="display:block"
-  data-ad-format="autorelaxed"
-  data-ad-client="ca-pub-5295583488737876"
-  data-ad-slot="1918431149"></ins>
-  <script>
-  (adsbygoogle = window.adsbygoogle || []).push({});
-  </script>
+<!-- Display errors in a big red box -->
+<div class="error red-border" style="display: none">
+<p id="errortext">Error</p>
+<button onclick="main()">Try again</button>
+<a href="https://mikrodinet.github.io/hint"><button>Lock a link</button></a>
+<a href="https://mikrodinet.github.io/hint/decrypt/" id="no-redirect" target="_blank"><button>Decrypt without redirect</button></a>
+<a href="https://mikrodinet.github.io/hint/hidden/" id="hidden" target="_blank"><button>Create hidden bookmark</button></a>
+</div>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
+crossorigin="anonymous"></script>
+<!-- display -->
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-client="ca-pub-6827901881006590"
+data-ad-slot="4584348588"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
+crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-format="autorelaxed"
+data-ad-client="ca-pub-6827901881006590"
+data-ad-slot="6105018314"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 <div
-  class="DePayButton"
-  label="Pay"
-  widget="Payment"
-  configuration='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xb211dbd5bcecf7a8b47b5ab4b5826a52830b9514","receiver":"0xfdd2b5ba05c21b1fd387f53ffc001aca512d6877"}]}'
+class="DePayButton"
+label="Pay"
+widget="Payment"
+configuration='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xb211dbd5bcecf7a8b47b5ab4b5826a52830b9514","receiver":"0xfdd2b5ba05c21b1fd387f53ffc001aca512d6877"}]}'
 ></div>
 <script src="https://integrate.depay.fi/buttons/v6.js"></script>
 <noscript><a href="http://www.awdev.my.id/home.html">Web3 Payments Awdev Corporation</a> are currently only supported with JavaScript enabled.</noscript>
 <script>DePayButtons.init({document: document});</script>
 
 </body>
-
 </html>
