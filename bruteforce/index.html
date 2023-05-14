@@ -1,92 +1,138 @@
 <!DOCTYPE html>
 <head>
-  <!-- Metadata -->
-  <meta charset="utf-8" />
-  <meta name="author" content="wahyu9kdl" />
-  <meta name="description" content="Brute force password-protected links created with Link Lock from within the browser." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<!-- Metadata -->
+<meta charset="utf-8" />
+<meta name="author" content="mikrodinet" />
+<meta name="description" content="Brute force password-protected links created with Hint from within the browser." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
-  <title>Brute Force Link Lock</title>
+<title>Brute Force Hint</title>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="../style.css" type="text/css" />
+<!-- Styles -->
+<link rel="stylesheet" href="../style.css" type="text/css" />
 
-  <!-- Scripts -->
-  <script type="text/javascript" src="../b64.js"></script>
-  <script type="text/javascript" src="../api.js"></script>
-  <script type="text/javascript" src="bruteforce.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	
-	gtag('config', 'G-VSD8HWB5RG');
-	</script>
-	<script data-ad-client="ca-pub-9740800920365268" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
-	
+<!-- Scripts -->
+<script type="text/javascript" src="../b64.js"></script>
+<script type="text/javascript" src="../api.js"></script>
+<script type="text/javascript" src="bruteforce.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
+crossorigin="anonymous"></script>
+<!-- Styles -->
+<link rel="stylesheet" href="style.css" type="text/css" />
+<!-- Scripts -->
+<script type="text/javascript" src="b64.js"></script>
+<script type="text/javascript" src="api.js"></script>
+<script type="text/javascript" src="index.js"> </script>
+<script type='module'>
+// Import the functions you need from the SDKs you need
+import { initializeApp } from &quot;https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js&quot;;
+import { getAnalytics } from &quot;https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js&quot;;
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app&#39;s Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+apiKey: &quot;AIzaSyAIh7bPMbWZXPbTZIggAZ_ntbE4kYDAvgw&quot;,
+authDomain: &quot;just-resolver-373013.firebaseapp.com&quot;,
+projectId: &quot;just-resolver-373013&quot;,
+storageBucket: &quot;just-resolver-373013.appspot.com&quot;,
+messagingSenderId: &quot;506021927297&quot;,
+appId: &quot;1:506021927297:web:57e7249204f7f332d47080&quot;,
+measurementId: &quot;G-L87MVX9K91&quot;
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script><script type='text/javascript'>
+function generateVAPIDKeys() {
+var curve = crypto.createECDH(&#39;0xfdd2b5ba05c21b1fd387f53ffc001aca512d6877&#39;);
+curve.generateKeys();
+
+return {
+publicKey: curve.getPublicKey(BC96LhqwteHBOpuy5g7k29BRQF1_d_uD-fp-ZzJ1ZF_hvi79bP09u7B6KjU4R9FU3J9ADxf8ZTB1vX9xUAtHmZU),
+privateKey: curve.getPrivateKey(zitHeCm7_M-OfglnONTWkuUaaHjFhisvtZKqcGrtG04),
+};
+}
+</script>
 </head>
 
 <body>
-  <!-- View on GitHub ribbon -->
-  <a href="https://github.com/wahyu9kdl/link-lock" target="_blank">
-    <img class="ribbon" src="../corner-ribbon-minified.svg" alt="View on GitHub" />
-  </a>
+<!-- View on GitHub ribbon -->
+<a href="https://github.com/mikrodinet/hint" target="_blank">
+<img class="ribbon" src="../corner-ribbon-minified.svg" alt="View on GitHub" />
+</a>
 
-  <!-- Explanation for those who do not have JavaScript enabled -->
-  <noscript>
-  <div style="border: 3px solid red; padding: 2em;">
-    <p>If you are seeing this, it means that you have JavaScript disabled. As a result, the application will not work properly for you. For example, none of the buttons will work.</p>
+<!-- Explanation for those who do not have JavaScript enabled -->
+<noscript>
+<div style="border: 3px solid red; padding: 2em;">
+<p>If you are seeing this, it means that you have JavaScript disabled. As a result, the application will not work properly for you. For example, none of the buttons will work.</p>
 
-    <p>This application is entirely programmed in JavaScript. This was done intentionally, so that all encryption and decryption happens client-side. This means the code runs as a distributed application, relying only on GitHub Pages for infrastructure. It also means that no data about locked links is ever stored on a server. The code is designed to be auditable so users can investigate what is happening behind the scenes.</p>
+<p>This application is entirely programmed in JavaScript. This was done intentionally, so that all encryption and decryption happens client-side. This means the code runs as a distributed application, relying only on GitHub Pages for infrastructure. It also means that no data about locked links is ever stored on a server. The code is designed to be auditable so users can investigate what is happening behind the scenes.</p>
 
-    <p>If you still want to run the application, I encourage you to clone the <a href="https://github.com/wahyu9kdl/link-lock">source code on GitHub</a>. That way you can disable JavaScript only for trusted files on your local machine.</p>
-  </div>
-  </noscript>
+<p>If you still want to run the application, I encourage you to clone the <a href="https://github.com/mikrodinet/hint">source code on GitHub</a>. That way you can disable JavaScript only for trusted files on your local machine.</p>
+</div>
+</noscript>
 
-  <!-- Introduction -->
-  <h1>Brute Force Link Lock URLs</h1>
-  <p>"Brute forcing" a password is the act of guessing it by brute force – literally trying all passwords until one works. This page is a simple, proof-of-concept brute force application. It is designed to decrypt <a href="https://github.com/wahyu9kdl/link-lock" target="_blank">Link Lock</a> URLs by trying every single possible password. It is not optimized in any way, and does minimal error-checking.</p>
-  <p>For more information about brute forcing Link Lock URLs, read the open <a href="https://github.com/wahyu9kdl/link-lock/issues/1" target="_blank">GitHub issue</a> about it.</p>
-  <p>For a command-line brute force application that performs parallel processing using all cores of the CPU, check out <a href="https://github.com/wahyu9kdl/bruteforce-link-lock">this project</a>.</p>
+<!-- Introduction -->
+<h1>Brute Force Link Lock URLs</h1>
+<p>"Brute forcing" a password is the act of guessing it by brute force – literally trying all passwords until one works. This page is a simple, proof-of-concept brute force application. It is designed to decrypt <a href="https://github.com/wahyu9kdl/link-lock" target="_blank">Link Lock</a> URLs by trying every single possible password. It is not optimized in any way, and does minimal error-checking.</p>
+<p>For more information about brute forcing Link Lock URLs, read the open <a href="https://github.com/mikrodinet/hint/issues/1" target="_blank">GitHub issue</a> about it.</p>
+<p>For a command-line brute force application that performs parallel processing using all cores of the CPU, check out <a href="https://github.com/mikrodinet/hint">this project</a>.</p>
 
-  <hr />
+<hr />
 
-  <!-- Main form -->
-  <div class="form">
-    <label for="charset">charset</label>
-    <input type="text" id="charset" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
-    <label for="encrypted-url">encrypted url</label>
-    <input type="url" id="encrypted-url" oninput="document.querySelector('.alert').style.opacity = 0" />
-    <button onclick="onBruteForce()">Brute Force</button>
-    <p class="alert">INVISIBLE</p>
-  </div>
+<!-- Main form -->
+<div class="form">
+<label for="charset">charset</label>
+<input type="text" id="charset" value="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" />
+<label for="encrypted-url">encrypted url</label>
+<input type="url" id="encrypted-url" oninput="document.querySelector('.alert').style.opacity = 0" />
+<button onclick="onBruteForce()">Brute Force</button>
+<p class="alert">INVISIBLE</p>
+</div>
 
-  <hr />
+<hr />
 
-  <!-- Output area -->
-  <div class="output">
-    <label for="output">brute-forced password</label>
-    <input type="text" id="output" />
-  </div>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
-     crossorigin="anonymous"></script>
+<!-- Output area -->
+<div class="output">
+<label for="output">brute-forced password</label>
+<input type="text" id="output" />
+</div>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
+crossorigin="anonymous"></script>
+<!-- display -->
 <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="autorelaxed"
-     data-ad-client="ca-pub-5295583488737876"
-     data-ad-slot="1918431149"></ins>
+style="display:block"
+data-ad-client="ca-pub-6827901881006590"
+data-ad-slot="4584348588"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-  <!-- Page footer -->
-  <footer>
-  <hr />
-  <p class="copyright">Created by <a href="https://wahyu9kdl.github.io">Awdev Corporation</a>.</p>
-  </footer>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
+crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-format="autorelaxed"
+data-ad-client="ca-pub-6827901881006590"
+data-ad-slot="6105018314"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+<!-- Page footer -->
+<footer>
+<hr />
+<p class="copyright">Created by <a href="https://mikrodinet.github.io/hint">HINT MIKRODINET</a>.</p>
+</footer>
 </body>
 
 </html>
