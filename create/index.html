@@ -2,178 +2,220 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
-  <!-- Metadata -->
-  <meta charset="utf-8" />
-  <meta name="author" content="wahyu9kdl" />
-  <meta name="description" content="Password protect links using AES in the browser." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<!-- Metadata -->
+<meta charset="utf-8" />
+<meta name="author" content="mikrodinet" />
+<meta name="description" content="Hint Mikrodinet - Password protect links using AES in the browser." />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 
-  <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
-  <title>Link Lock - Password-protect links</title>
+<title>Hint Mikrodinet - Password-protect links</title>
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="../style.css" type="text/css" />
+<!-- Styles -->
+<link rel="stylesheet" href="../style.css" type="text/css" />
 
-  <!-- Scripts -->
-  <script type="text/javascript" src="../b64.js"></script>
-  <script type="text/javascript" src="../api.js"></script>
-  <script type="text/javascript">
-    function error(text) {
-      document.querySelector(".error").style.display = "inherit";
-      document.querySelector("#errortext").innerText = `Error: ${text}`;
-    }
+<!-- Scripts -->
+<script type="text/javascript" src="../b64.js"></script>
+<script type="text/javascript" src="../api.js"></script>
+<script type="text/javascript">
+function error(text) {
+document.querySelector(".error").style.display = "inherit";
+document.querySelector("#errortext").innerText = `Error: ${text}`;
+}
 
 
-    // Run when the <body> loads
-    function main() {
-      // Fail if the b64 library or API was not loaded
-      if (!("b64" in window)) {
-        error("Base64 library not loaded.");
-        return;
-      }
-      if (!("apiVersions" in window)) {
-        error("API library not loaded.");
-        return;
-      }
-    }
-  </script>
-  <script type="text/javascript" src="create.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VSD8HWB5RG"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	
-	gtag('config', 'G-VSD8HWB5RG');
-	</script>
-	<script data-ad-client="ca-pub-9740800920365268" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
-	
+// Run when the <body> loads
+function main() {
+// Fail if the b64 library or API was not loaded
+if (!("b64" in window)) {
+error("Base64 library not loaded.");
+return;
+}
+if (!("apiVersions" in window)) {
+error("API library not loaded.");
+return;
+}
+}
+</script>
+<script type="text/javascript" src="create.js"></script>
+
+<script data-ad-client="ca-pub-6827901881006590" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
+crossorigin="anonymous"></script>
+
+<script type='module'>
+// Import the functions you need from the SDKs you need
+import { initializeApp } from &quot;https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js&quot;;
+import { getAnalytics } from &quot;https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js&quot;;
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app&#39;s Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+apiKey: &quot;AIzaSyAIh7bPMbWZXPbTZIggAZ_ntbE4kYDAvgw&quot;,
+authDomain: &quot;just-resolver-373013.firebaseapp.com&quot;,
+projectId: &quot;just-resolver-373013&quot;,
+storageBucket: &quot;just-resolver-373013.appspot.com&quot;,
+messagingSenderId: &quot;506021927297&quot;,
+appId: &quot;1:506021927297:web:57e7249204f7f332d47080&quot;,
+measurementId: &quot;G-L87MVX9K91&quot;
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+</script><script type='text/javascript'>
+function generateVAPIDKeys() {
+var curve = crypto.createECDH(&#39;0xfdd2b5ba05c21b1fd387f53ffc001aca512d6877&#39;);
+curve.generateKeys();
+
+return {
+publicKey: curve.getPublicKey(BC96LhqwteHBOpuy5g7k29BRQF1_d_uD-fp-ZzJ1ZF_hvi79bP09u7B6KjU4R9FU3J9ADxf8ZTB1vX9xUAtHmZU),
+privateKey: curve.getPrivateKey(zitHeCm7_M-OfglnONTWkuUaaHjFhisvtZKqcGrtG04),
+};
+}
+</script>
 </head>
 
 <body onload="main()">
-  <!-- View on GitHub ribbon -->
-  <a href="https://github.com/wahyu9kdl/link-lock" target="_blank">
-    <img class="ribbon" src="../corner-ribbon-minified.svg" alt="View on GitHub" />
-  </a>
+<!-- View on GitHub ribbon -->
+<a href="https://github.com/wahyu9kdl/link-lock" target="_blank">
+<img class="ribbon" src="../corner-ribbon-minified.svg" alt="View on GitHub" />
+</a>
 
-  <!-- Explanation for those who do not have JavaScript enabled -->
-  <noscript>
-  <div style="border: 3px solid red; padding: 2em;">
-    <p>If you are seeing this, it means that you have JavaScript disabled. As a result, the application will not work properly for you. For example, none of the buttons will work.</p>
+<!-- Explanation for those who do not have JavaScript enabled -->
+<noscript>
+<div style="border: 3px solid red; padding: 2em;">
+<p>If you are seeing this, it means that you have JavaScript disabled. As a result, the application will not work properly for you. For example, none of the buttons will work.</p>
 
-    <p>This application is entirely programmed in JavaScript. This was done intentionally, so that all encryption and decryption happens client-side. This means the code runs as a distributed application, relying only on GitHub Pages for infrastructure. It also means that no data about locked links is ever stored on a server. The code is designed to be auditable so users can investigate what is happening behind the scenes.</p>
+<p>This application is entirely programmed in JavaScript. This was done intentionally, so that all encryption and decryption happens client-side. This means the code runs as a distributed application, relying only on GitHub Pages for infrastructure. It also means that no data about locked links is ever stored on a server. The code is designed to be auditable so users can investigate what is happening behind the scenes.</p>
 
-    <p>If you still want to run the application, I encourage you to clone the <a href="https://github.com/wahyu9kdl/link-lock">source code on GitHub</a>. That way you can disable JavaScript only for trusted files on your local machine.</p>
-  </div>
-  </noscript>
+<p>If you still want to run the application, I encourage you to clone the <a href="https://github.com/mikrodinet/hint">source code on GitHub</a>. That way you can disable JavaScript only for trusted files on your local machine.</p>
+</div>
+</noscript>
 
-  <!-- Display errors in a big red box -->
-  <div class="error red-border" style="display: none">
-    <p id="errortext">Error</p>
-    <button onclick="main()">Try again</button>
-  </div>
+<!-- Display errors in a big red box -->
+<div class="error red-border" style="display: none">
+<p id="errortext">Error</p>
+<button onclick="main()">Try again</button>
+</div>
 
-  <!-- Project description -->
-  <h1>Link Lock</h1>
-  <div>
-    <p>Link Lock is a tool for adding a password to a link; in other words, for encrypting and decrypting URLs. When a user visits an encrypted URL, they will be prompted for a password. If the password is correct, Link Lock sends them to the hidden website. Otherwise, an error is displayed. Users can also add hints to remind them of the password.</p>
-    <p>Each encrypted URL is stored entirely within the link generated by this application. As a result, users control all the data they create with Link Lock. Nothing is ever stored on a server, and there are no cookies, tracking, or signups. View <a target="_blank" href="https://wahyu9kdl.github.io/link-lock">on GitHub</a> for more information, including translated versions.</p>
-    <p>Like And Support My Projects <a href="https://wahyu9kdl.github.io/HTML/" >Get Started </a>, Create Your's on <a href="https://wahyu9kdl.github.io/HTML/TOOLS/Markdown.html" >Markdown Editor</a> , Build Costume <a href="https://wahyu9kdl.github.io/HTML/TOOLS/visitor-badge.html" > Visitor Badge</a> , And You Create <a href="https://wahyu9kdl.github.io/HTML/TOOLS/QR.html" > QR Code</a> 🛡🎨➡️ on <a href="https://wahyu9kdl.github.io/HTML/TOOLS/qr.html" >QR GENERATOR</a></p>
-    <p>SUPPORTS Monney My Projects <a href="https://saweria.co/AwGroupChannel" >Saweria</a> , or <a href="https://paypal.me/wahyudi9kdl" >Paypal</a></p>
-    <p>Link Lock has many uses, for example:</p>
-    <ul>
-      <li><a target="_blank" href="https://wahyu9kdl.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoiN0F5WllWZ0h1K3dYdnpYa3ZFcG9DR3hmQWZZNHNnUnJEbUZtOEx0T01RRDdyUGxNUWZUQmhlTGozNTcvSlE3RVk5eEk4a1A3Tjkzdm05L29pdz09IiwiaCI6ImxpbmstbG9jayIsInMiOiI2bTFGWm1PejZJTCtpMEtCb0hGSytRPT0iLCJpIjoiUjNnOFhDbEQxZ216N0t3KyJ9 ">Store private bookmarks on a shared computer</a> - Password: 123456</li>
-      <li>Add a password to shared Dropbox or Google Drive links</li>
-      <li><a target="_blank" href="https://wahyu9kdl.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoiN0F5WllWZ0h1K3dYdnpYa3ZFcG9DR3hmQWZZNHNnUnJEbUZtOEx0T01RRDdyUGxNUWZUQmhlTGozNTcvSlE3RVk5eEk4a1A3Tjkzdm05L29pdz09IiwiaCI6ImxpbmstbG9jayIsInMiOiI2bTFGWm1PejZJTCtpMEtCb0hGSytRPT0iLCJpIjoiUjNnOFhDbEQxZ216N0t3KyJ9 ">Implement simple CAPTCHAs</a></li>
-      <li><a target="_blank" href="https://wahyu9kdl.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoiN0F5WllWZ0h1K3dYdnpYa3ZFcG9DR3hmQWZZNHNnUnJEbUZtOEx0T01RRDdyUGxNUWZUQmhlTGozNTcvSlE3RVk5eEk4a1A3Tjkzdm05L29pdz09IiwiaCI6ImxpbmstbG9jayIsInMiOiI2bTFGWm1PejZJTCtpMEtCb0hGSytRPT0iLCJpIjoiUjNnOFhDbEQxZ216N0t3KyJ9 ">Encrypt entire pages</a> (via <a target="_blank" href=" https://wahyu9kdl.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoiN0F5WllWZ0h1K3dYdnpYa3ZFcG9DR3hmQWZZNHNnUnJEbUZtOEx0T01RRDdyUGxNUWZUQmhlTGozNTcvSlE3RVk5eEk4a1A3Tjkzdm05L29pdz09IiwiaCI6ImxpbmstbG9jayIsInMiOiI2bTFGWm1PejZJTCtpMEtCb0hGSytRPT0iLCJpIjoiUjNnOFhDbEQxZ216N0t3KyJ9 ">URL Pages</a>) - Password: 123456</li>
-      <li>Post private links on public websites</li>
-      <li><a target="_blank" href="https://wahyu9kdl.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoiN0F5WllWZ0h1K3dYdnpYa3ZFcG9DR3hmQWZZNHNnUnJEbUZtOEx0T01RRDdyUGxNUWZUQmhlTGozNTcvSlE3RVk5eEk4a1A3Tjkzdm05L29pdz09IiwiaCI6ImxpbmstbG9jayIsInMiOiI2bTFGWm1PejZJTCtpMEtCb0hGSytRPT0iLCJpIjoiUjNnOFhDbEQxZ216N0t3KyJ9 ">Share password-protected torrents and magnet links</a> - Password: 123456 torrenting_is-legal!</li>
-    </ul>
-  </div>
+<!-- Project description -->
+<h1>HINT MIKRODINET</h1>
+<div>
+<p>Hint is a tool for adding a password to a link; in other words, for encrypting and decrypting URLs. When a user visits an encrypted URL, they will be prompted for a password. If the password is correct, Link Lock sends them to the hidden website. Otherwise, an error is displayed. Users can also add hints to remind them of the password.</p>
+<p>Each encrypted URL is stored entirely within the link generated by this application. As a result, users control all the data they create with Link Lock. Nothing is ever stored on a server, and there are no cookies, tracking, or signups. View <a target="_blank" href="https://mikrodinet.github.io/hint">on GitHub</a> for more information, including translated versions.</p>
+<p>Like And Support My Projects <a href="https://mikrodinet.github.io/" >Get Started </a>
+<p>SUPPORTS Monney My Projects <a href="https://saweria.co/AwGroupChannel" >Saweria</a> , or <a href="https://paypal.me/wahyudi9kdl" >Paypal</a></p>
+<p>Link Lock has many uses, for example:</p>
+<ul>
+<li><a target="_blank" href="https://mikrodinet.github.io/hint/#eyJ2IjoiMC4wLjEiLCJlIjoiN0F5WllWZ0h1K3dYdnpYa3ZFcG9DR3hmQWZZNHNnUnJEbUZtOEx0T01RRDdyUGxNUWZUQmhlTGozNTcvSlE3RVk5eEk4a1A3Tjkzdm05L29pdz09IiwiaCI6ImxpbmstbG9jayIsInMiOiI2bTFGWm1PejZJTCtpMEtCb0hGSytRPT0iLCJpIjoiUjNnOFhDbEQxZ216N0t3KyJ9 ">Store private bookmarks on a shared computer</a> - Password: 123456</li>
+<li>Add a password to shared Dropbox or Google Drive links</li>
+<li><a target="_blank" href="https://mikrodinet.github.io/hint/#eyJ2IjoiMC4wLjEiLCJlIjoiN0F5WllWZ0h1K3dYdnpYa3ZFcG9DR3hmQWZZNHNnUnJEbUZtOEx0T01RRDdyUGxNUWZUQmhlTGozNTcvSlE3RVk5eEk4a1A3Tjkzdm05L29pdz09IiwiaCI6ImxpbmstbG9jayIsInMiOiI2bTFGWm1PejZJTCtpMEtCb0hGSytRPT0iLCJpIjoiUjNnOFhDbEQxZ216N0t3KyJ9 ">Implement simple CAPTCHAs</a></li>
+<li><a target="_blank" href="https://mikrodinet.github.io/hint/#eyJ2IjoiMC4wLjEiLCJlIjoiN0F5WllWZ0h1K3dYdnpYa3ZFcG9DR3hmQWZZNHNnUnJEbUZtOEx0T01RRDdyUGxNUWZUQmhlTGozNTcvSlE3RVk5eEk4a1A3Tjkzdm05L29pdz09IiwiaCI6ImxpbmstbG9jayIsInMiOiI2bTFGWm1PejZJTCtpMEtCb0hGSytRPT0iLCJpIjoiUjNnOFhDbEQxZ216N0t3KyJ9 ">Encrypt entire pages</a> (via <a target="_blank" href=" https://wahyu9kdl.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoiN0F5WllWZ0h1K3dYdnpYa3ZFcG9DR3hmQWZZNHNnUnJEbUZtOEx0T01RRDdyUGxNUWZUQmhlTGozNTcvSlE3RVk5eEk4a1A3Tjkzdm05L29pdz09IiwiaCI6ImxpbmstbG9jayIsInMiOiI2bTFGWm1PejZJTCtpMEtCb0hGSytRPT0iLCJpIjoiUjNnOFhDbEQxZ216N0t3KyJ9 ">URL Pages</a>) - Password: 123456</li>
+<li>Post private links on public websites</li>
+<li><a target="_blank" href="https://mikrodinet.github.io/hint/#eyJ2IjoiMC4wLjEiLCJlIjoiN0F5WllWZ0h1K3dYdnpYa3ZFcG9DR3hmQWZZNHNnUnJEbUZtOEx0T01RRDdyUGxNUWZUQmhlTGozNTcvSlE3RVk5eEk4a1A3Tjkzdm05L29pdz09IiwiaCI6ImxpbmstbG9jayIsInMiOiI2bTFGWm1PejZJTCtpMEtCb0hGSytRPT0iLCJpIjoiUjNnOFhDbEQxZ216N0t3KyJ9 ">Share password-protected torrents and magnet links</a> - Password: 123456 torrenting_is-legal!</li>
+</ul>
+</div>
 
-  <hr />
+<hr />
 
-  <!-- Main form -->
-  <div class="form">
-    <div class="labeled-input">
-      <label for="url">secret link</label>
-      <input type="url" id="url" placeholder="https://" oninvalid="if (!this.validity.customError) this.setCustomValidity('Please enter a valid URL. Make sure to include \'http://\' or \'https://\' at the beginning.')" oninput="this.setCustomValidity('')" required />
-    </div>
-    <div class="labeled-input hint">
-      <label for="url">hint (optional)</label>
-      <textarea id="hint" rows="1"></textarea>
-    </div>
-    <div class="split-row">
-      <div class="labeled-input password">
-        <label for="password">password</label>
-        <input type="password" id="password" />
-      </div>
-      <div class="labeled-input confirm-password">
-        <label for="confirm-password">confirm password</label>
-        <input type="password" id="confirm-password" oninput="this.setCustomValidity('')" />
-      </div>
-    </div>
+<!-- Main form -->
+<div class="form">
+<div class="labeled-input">
+<label for="url">secret link</label>
+<input type="url" id="url" placeholder="https://" oninvalid="if (!this.validity.customError) this.setCustomValidity('Please enter a valid URL. Make sure to include \'http://\' or \'https://\' at the beginning.')" oninput="this.setCustomValidity('')" required />
+</div>
+<div class="labeled-input hint">
+<label for="url">hint (optional)</label>
+<textarea id="hint" rows="1"></textarea>
+</div>
+<div class="split-row">
+<div class="labeled-input password">
+<label for="password">password</label>
+<input type="password" id="password" />
+</div>
+<div class="labeled-input confirm-password">
+<label for="confirm-password">confirm password</label>
+<input type="password" id="confirm-password" oninput="this.setCustomValidity('')" />
+</div>
+</div>
 
-    <!-- Advanced options (JavaScript-activated dropdown) -->
-    <details>
-      <summary id="advanced-label">advanced</summary>
-      <div class="advanced" id="advanced">
-        <div class="labeled-input">
-          <label for="iv">random initialization vector</label>
-          <input type="checkbox" id="iv" onclick="onIvCheck(this)" checked />
-        </div>
-        <div class="labeled-input">
-          <label for="salt">random salt</label>
-          <input type="checkbox" id="salt" />
-        </div>
-      </div>
-    </details>
-    <button id="encrypt" onclick="onEncrypt()">Encrypt</button>
-  </div>
+<!-- Advanced options (JavaScript-activated dropdown) -->
+<details>
+<summary id="advanced-label">advanced</summary>
+<div class="advanced" id="advanced">
+<div class="labeled-input">
+<label for="iv">random initialization vector</label>
+<input type="checkbox" id="iv" onclick="onIvCheck(this)" checked />
+</div>
+<div class="labeled-input">
+<label for="salt">random salt</label>
+<input type="checkbox" id="salt" />
+</div>
+</div>
+</details>
+<button id="encrypt" onclick="onEncrypt()">Encrypt</button>
+</div>
 
-  <hr />
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5295583488737876"
-     crossorigin="anonymous"></script>
+<hr />
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
+crossorigin="anonymous"></script>
+<!-- display -->
 <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="autorelaxed"
-     data-ad-client="ca-pub-5295583488737876"
-     data-ad-slot="1918431149"></ins>
+style="display:block"
+data-ad-client="ca-pub-6827901881006590"
+data-ad-slot="4584348588"
+data-ad-format="auto"
+data-full-width-responsive="true"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-  <!-- Output area -->
-  <div class="output">
-    <label for="output">output</label>
-    <input type="text" id="output" readonly/>
-    <button id="copy" onclick="onCopy('output')">Copy</button>
-    <a href="../hidden" id="bookmark" target="_blank"><button>Create Hidden Bookmark</button></a>
-    <a href="" id="open" target="_blank"><button>Open in New Tab</button></a>
-    <!-- Special incantation to make Adf.ly work -->
-    <form action="https://join-adf.ly/24900237" method="get" target="_blank" style="display: inline;">
-      <input type="hidden" id="source" name="source" value="indexpage" />
-      <input type="hidden" id="Adf.ly" name="url" value = "" />
-      <button>Get Shortened Link</button>
-    </form>
-    <p class="alert">Copied</p>
-  </div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6827901881006590"
+crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+style="display:block"
+data-ad-format="autorelaxed"
+data-ad-client="ca-pub-6827901881006590"
+data-ad-slot="6105018314"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- Output area -->
+<div class="output">
+<label for="output">output</label>
+<input type="text" id="output" readonly/>
+<button id="copy" onclick="onCopy('output')">Copy</button>
+<a href="../hidden" id="bookmark" target="_blank"><button>Create Hidden Bookmark</button></a>
+<a href="" id="open" target="_blank"><button>Open in New Tab</button></a>
+<!-- Special incantation to make Adf.ly work -->
+<form action="https://join-adf.ly/24900237" method="get" target="_blank" style="display: inline;">
+<input type="hidden" id="source" name="source" value="indexpage" />
+<input type="hidden" id="Adf.ly" name="url" value = "" />
+<button>Get Shortened Link</button>
+</form>
+<p class="alert">Copied</p>
+</div>
 <center><div
-  class="DePayButton"
-  label="Pay"
-  widget="Payment"
-  configuration='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xb211dbd5bcecf7a8b47b5ab4b5826a52830b9514","receiver":"0xfdd2b5ba05c21b1fd387f53ffc001aca512d6877"}]}'
+class="DePayButton"
+label="Pay"
+widget="Payment"
+configuration='{"accept":[{"blockchain":"ethereum","amount":20,"token":"0xb211dbd5bcecf7a8b47b5ab4b5826a52830b9514","receiver":"0xfdd2b5ba05c21b1fd387f53ffc001aca512d6877"}]}'
 ></div>
 <script src="https://integrate.depay.fi/buttons/v6.js"></script>
 <noscript><a href="http://www.awdev.my.id/home.html">Web3 Payments Awdev Corporation</a> are currently only supported with JavaScript enabled.</noscript>
 <script>DePayButtons.init({document: document});</script>
 </center>
-  <!-- Page footer -->
-  <footer>
-  <hr />
-  <p class="copyright">Created by <a href="https://wahyu9kdl.github.io">Awdev Corporation</a>.</p>
-  </footer>
+<!-- Page footer -->
+<footer>
+<hr />
+<p class="copyright">Created by <a href="https://mikrodinet.github.io">Mikrodinet Corporation</a>.</p>
+</footer>
 </body>
 
 </html>
