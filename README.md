@@ -1,4 +1,4 @@
-# Link Lock
+# HINT
 
 [Password-protect URLs using AES in the
 browser.](https://mikrodinet.github.io/hint)
