@@ -1,4 +1,4 @@
-var url = 'https://github.com/wahyu9kdl/link-lock/archive/refs/heads/main.zip';
+var url = 'https://github.com/mikrodinet/hint/archive/refs/heads/main.zip';
  var request = new XMLHttpRequest();
  request.responseType = "blob"; // Not sure if this is needed
  request.open("POST", url);
