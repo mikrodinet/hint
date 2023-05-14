@@ -63,11 +63,11 @@ async function main() {
 
       // Set the "decrypt without redirect" URL appropriately
       document.querySelector("#no-redirect").href =
-        `https://wahyu9kdl.github.io/link-lock/decrypt/#${hash}`;
+        `https://mikrodinet.github.io/hint/decrypt/#${hash}`;
 
       // Set the "create hidden bookmark" URL appropriately
       document.querySelector("#hidden").href =
-        `https://wahyu9kdl.github.io/link-lock/hidden/#${hash}`;
+        `https://mikrodinet.github.io/hint/hidden/#${hash}`;
       return;
     }
 
