@@ -1,11 +1,11 @@
 {
-  "name": "link-lock",
+  "name": "hint",
   "version": "1.0.0",
-  "description": "Link Lock is a tool for adding a password to a link; in other words, for encrypting and decrypting URLs. ",
-  "keywords": ["link-lock", "github", "awdev", "tatus","wahyu9kdl","scurity"],
-  "website": "https://wahyu9kdl.github.io/link-lock",
-  "repository": "https://github.com/wahyu9kdl/link-lock",
-  "logo": "https://wahyu9kdl.github.io/img/favicon.ico",
+  "description": "hint is a tool for adding a password to a link; in other words, for encrypting and decrypting URLs. ",
+  "keywords": ["hint", "github", "mikrodinet", "tatus","password","scurity","safelink","sharef link"],
+  "website": "https://mikrodinet.github.io/hint",
+  "repository": "https://github.com/mikrodinet/hint",
+  "logo": "https://mikrodinet.github.io/img/favicon.ico",
   "env": {
     "CYPRESS_INSTALL_BINARY": {
       "description": "Disable the cypress binary installation",
