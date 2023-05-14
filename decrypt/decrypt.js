@@ -115,6 +115,6 @@ function onCopy(id) {
 function main() {
   if (window.location.hash) {
     document.querySelector("#encrypted-url").value =
-      `https://wahyu9kdl.github.io/link-lock/${window.location.hash}`;
+      `https://mikrodinet.github.io/hint/${window.location.hash}`;
   }
 }
